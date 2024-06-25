@@ -38,6 +38,7 @@ Flask==3.0.2
 fonttools==4.53.0
 fqdn==1.5.1
 frozendict==2.4.4
+gunicorn==22.0.0
 h11==0.14.0
 html5lib==1.1
 htmlmin==0.1.12
