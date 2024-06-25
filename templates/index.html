@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration | My Beautiful Website</title>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href='{% url "about" %}'>About</a></li>
+          <li><a href='{% url "service" %}'>Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <section id="register">
+        <h1>Register</h1>
+        <form method="post" action="#">
+        {% csrf_token %}
+          <label for="fname">First Contestant:</label>
+          <input type="text" id="fname" name="fname" required />
+          <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday" required />
+          <br>
+          </select>
+          <br>
+          <label for="lname">Second Contestant:</label>
+          <input type="text" id="lname" name="fname2" required />
+          <select id="gender" name="gender2" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday2" required />
+          <br>
+          </select>
+          <br>
+          <label for="lname">Third Contestant:</label>
+          <input type="text" id="lname" name="fname3" required />
+          <select id="gender" name="gender3" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          
+          <input type="date" id="birthday" name="birthday3" required />
+          <br>
+          <br>
+          <label for="text">Collage:</label>
+          
+          <br>
+          <select id="collage" name="Collage" required>
+            <option value="">Select</option>
+            <option value="Anjuman Engg">Anjuman Engg</option>
+            <option value="Anjuman Poly">Anjuman Poly</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="text">Contact No:</label>
+          <input type="text" id="text" name="Contact_no" required />
+          <br>
+         
+          
+
+          
+          <label for="terms">
+            I agree to the
+            <a href="#">terms and conditions</a>
+          </label>
+          <input type="checkbox" id="terms" name="terms" required />
+          <br>
+          <button class="btn-algolia" type="submit">Register</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>Copyright © 2024 My Website</p>
+    </footer>
+  </body>
+</html>
